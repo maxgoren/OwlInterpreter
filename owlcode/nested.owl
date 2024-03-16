@@ -1,0 +1,11 @@
+program 'nested';
+begin
+    func outter(x: int) begin
+        func inner(y: int) begin
+            return (y + x);
+        end;
+        return inner(x + x);
+    end 
+    print outter(1);
+    outter(1);
+end
